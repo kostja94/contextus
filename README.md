@@ -19,6 +19,16 @@ Contextus provides a maintained context layer where:
 - history is available for traceability but excluded from ordinary task context;
 - public, internal, and confidential information can be filtered for each output.
 
+## Design Principles
+
+Contextus combines two ideas.
+
+**Git-like evolution for product truth.** Product context changes over time, so meaningful updates should remain attributable, comparable, and reversible. Contextus keeps a ready-to-use current state while recording semantic changes such as a launch, deprecation, rebrand, correction, or pivot. History explains how the context evolved without forcing every agent to reconstruct the present from old events.
+
+**Structured contribution interfaces.** Team statements, agent research, project documents, code observations, and public sources are different input channels into the same context system. Contextus normalizes their claims, sources, dates, status, and visibility so they can be compared instead of blended into prose. When two inputs disagree, it exposes a branch-like semantic diff and asks for resolution rather than silently selecting or merging a version.
+
+The analogy stops at the useful mechanics. Contributors are not reduced to APIs, and ordinary users do not need to manage branches or rebases. Human authority, source type, and uncertainty remain explicit parts of the context.
+
 ## Install
 
 ```bash
@@ -85,4 +95,3 @@ npm test
 ## License
 
 [MIT](LICENSE)
-
