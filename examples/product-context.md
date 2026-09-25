@@ -4,6 +4,7 @@ description: Current product context for the fictional Atlas CLI developer tool.
 type: context
 date: 2026-09-25
 updated: 2026-09-25
+contextus_version: 1
 status: active
 visibility: internal
 subject:
@@ -16,6 +17,7 @@ scope:
     - Public launch context
   excludes:
     - Parent company financials
+documents: {}
 ---
 
 # Atlas CLI
@@ -54,4 +56,3 @@ The public beta is distributed through npm. Windows, macOS, and Linux are suppor
 ## Sources
 
 - [Atlas release notes](https://example.com/atlas/releases)
-

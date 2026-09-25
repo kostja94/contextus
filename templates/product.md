@@ -3,6 +3,7 @@ title: "{{product_name}} Context"
 description: "Current product context for {{product_name}}, maintained for people and AI agents."
 type: context
 date: YYYY-MM-DD
+contextus_version: 1
 status: active
 visibility: internal
 subject:
@@ -11,6 +12,7 @@ subject:
 scope:
   includes: []
   excludes: []
+documents: {}
 ---
 
 # {{product_name}}
@@ -34,4 +36,3 @@ scope:
 ## Open Questions
 
 ## Sources
-

@@ -29,6 +29,18 @@ Contextus combines two ideas.
 
 The analogy stops at the useful mechanics. Contributors are not reduced to APIs, and ordinary users do not need to manage branches or rebases. Human authority, source type, and uncertainty remain explicit parts of the context.
 
+## Standard Entry
+
+An adopted project has one canonical entry at its repository root:
+
+```text
+contextus.md
+```
+
+Its YAML frontmatter identifies the subject, scope, visibility, format version, and maintained module paths. Its Markdown body gives people and agents a concise current overview. Detailed product, audience, marketing, brand, website, technical, decision, and change context may live in separate documents, but `contextus.md` is the only standard discovery entry.
+
+Legacy `project-context.md` files and tool-specific paths may still be read as fallback material. They are not new-project templates and must not become parallel context systems.
+
 ## Install
 
 ```bash
@@ -77,6 +89,14 @@ scripts/validate.mjs
 ```
 
 The main skill handles initialization, non-destructive import, updates, conflict resolution, maintenance, export, and snapshots. Templates vary by subject scope but share one information model.
+
+## Ecosystem
+
+- [Marketing Skills](https://github.com/kostja94/marketing-skills) consumes project truth for SEO, content, channels, and strategy work.
+- [Pagina](https://github.com/kostja94/pagina) consumes project truth when building pages and returns newly confirmed facts as Contextus update candidates.
+- [Bricks](https://github.com/kostja94/bricks) consumes relevant product, interface, brand, and technical context when building components.
+
+These projects remain usable without Contextus when the user supplies sufficient project material. They do not create or maintain an alternative durable context system. See the downstream contract in `skills/contextus/references/integrations.md`.
 
 ## Design Boundaries
 

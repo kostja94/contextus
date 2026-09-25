@@ -3,6 +3,7 @@ title: "{{organization_name}} Context"
 description: "Current organizational context for {{organization_name}}, maintained for people and AI agents."
 type: context
 date: YYYY-MM-DD
+contextus_version: 1
 status: active
 visibility: internal
 subject:
@@ -11,6 +12,7 @@ subject:
 scope:
   includes: []
   excludes: []
+documents: {}
 ---
 
 # {{organization_name}}
@@ -32,4 +34,3 @@ scope:
 ## Open Questions
 
 ## Sources
-

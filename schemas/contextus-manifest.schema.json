@@ -4,12 +4,13 @@
   "title": "Contextus Manifest",
   "type": "object",
   "additionalProperties": true,
-  "required": ["title", "description", "type", "date", "status", "visibility", "subject", "scope"],
+  "required": ["title", "description", "type", "date", "contextus_version", "status", "visibility", "subject", "scope"],
   "properties": {
     "title": { "type": "string", "minLength": 1 },
     "description": { "type": "string", "minLength": 1 },
     "type": { "const": "context" },
     "date": { "type": "string", "format": "date" },
+    "contextus_version": { "const": 1 },
     "updated": { "type": "string", "format": "date" },
     "status": { "enum": ["active", "paused", "archived"] },
     "visibility": { "enum": ["public", "internal", "confidential"] },
@@ -31,7 +32,10 @@
         "includes": { "type": "array", "items": { "type": "string" } },
         "excludes": { "type": "array", "items": { "type": "string" } }
       }
+    },
+    "documents": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
     }
   }
 }
-

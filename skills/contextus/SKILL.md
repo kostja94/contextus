@@ -11,6 +11,8 @@ Maintain a reliable current context for an organization, product, or project, th
 
 ## Establish The Context Project
 
+Look for `contextus.md` at the project root first. It is the only standard discovery entry. Its frontmatter maps the maintained modules; read only those relevant to the task. Legacy `project-context.md` files and tool-specific locations are fallback material, not alternative standards.
+
 Determine the subject, scope, working perspective, included and excluded concerns, visibility, and relationships before choosing a template. A Context Project may describe a company, one product, or a bounded initiative. Do not force these into one hierarchy.
 
 Ask one concise, direction-changing question when missing information would alter the subject, authority, scope, or output. Otherwise proceed.
@@ -28,6 +30,8 @@ Read [references/information-model.md](references/information-model.md) when cre
 - **Snapshot:** preserve an important output only when reproducibility or delivery requires it.
 
 Read [references/workflows.md](references/workflows.md) for the selected operation. Do not load unrelated procedures.
+
+Read [references/integrations.md](references/integrations.md) when another skill or repository needs to consume context, submit candidate facts, or operate without Contextus.
 
 ## Truth Rules
 
@@ -60,4 +64,3 @@ Generated outputs are disposable views, not new sources of truth. Save a snapsho
 ## Completion
 
 Report the context created or changed, any conflict or unknown that remains, the visibility applied, and any downstream asset that may now be stale.
-

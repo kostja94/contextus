@@ -22,6 +22,14 @@ Every project defines:
 
 Do not require a company context before creating a product context. Relationships may form a graph rather than a strict tree.
 
+## Canonical Entry
+
+Every adopted project exposes one root `contextus.md`. The file combines a machine-readable frontmatter manifest with a concise human-readable overview.
+
+The manifest declares `contextus_version`, subject, scope, default visibility, and optional module paths. Module documents own their detailed subjects; the entry keeps at most a useful summary and direct link for each module.
+
+Do not add a second active entry for a tool or agent. Legacy `project-context.md`, `.cursor/project-context.md`, and `.claude/project-context.md` files may be imported or read as fallback sources, but new Contextus projects do not create them.
+
 ## Maintained Layers
 
 | Layer | Responsibility |
@@ -89,4 +97,3 @@ Use section-level source metadata for groups of related facts. Require more prec
 Keep information when its absence or misinterpretation would likely cause a person or agent to make a wrong decision, produce false work, or ask the team the same question again.
 
 Exclude secrets, temporary instructions, generic research, execution logs, speculative conclusions, raw transcripts, and large copies of data already maintained elsewhere.
-

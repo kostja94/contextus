@@ -10,6 +10,7 @@ const required = [
   "skills/contextus/agents/openai.yaml",
   "skills/contextus/references/information-model.md",
   "skills/contextus/references/workflows.md",
+  "skills/contextus/references/integrations.md",
   "schemas/contextus-manifest.schema.json"
 ];
 
@@ -35,7 +36,7 @@ if (!skill.includes("references/information-model.md") || !skill.includes("refer
 }
 
 const schema = JSON.parse(await text("schemas/contextus-manifest.schema.json"));
-for (const field of ["title", "description", "type", "date", "status", "visibility", "subject", "scope"]) {
+for (const field of ["title", "description", "type", "date", "contextus_version", "status", "visibility", "subject", "scope"]) {
   if (!schema.required.includes(field)) failures.push(`Schema missing required field: ${field}`);
 }
 
@@ -47,7 +48,7 @@ if (templates.sort().join(",") !== "organization.md,product.md,project.md") {
 
 for (const file of templates) {
   const body = await readFile(new URL(file, templateDir), "utf8");
-  for (const marker of ["description:", "type: context", "date:", "visibility:", "subject:", "scope:", "## Open Questions", "## Sources"]) {
+  for (const marker of ["description:", "type: context", "date:", "contextus_version: 1", "visibility:", "subject:", "scope:", "documents:", "## Open Questions", "## Sources"]) {
     if (!body.includes(marker)) failures.push(`${file} is missing ${marker}`);
   }
 }
