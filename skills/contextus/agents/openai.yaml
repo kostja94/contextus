@@ -1,0 +1,5 @@
+interface:
+  display_name: "Contextus"
+  short_description: "Maintain product and project context"
+  default_prompt: "Use Contextus to create, update, inspect, or export the relevant product or project context without inventing missing facts."
+

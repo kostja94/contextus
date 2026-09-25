@@ -1,0 +1,11 @@
+{
+  "name": "contextus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Living product and project context for AI agents.",
+  "scripts": {
+    "test": "node scripts/validate.mjs"
+  },
+  "license": "MIT"
+}
+
