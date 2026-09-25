@@ -1,61 +1,28 @@
-# Contextus
+# Contextus: Product Context Layer for AI Agents
 
-**Living product and project context for AI agents.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/kostja94/contextus)](https://github.com/kostja94/contextus/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/kostja94/contextus)](https://github.com/kostja94/contextus/commits/main)
 
-Contextus helps teams maintain the current truth about an organization, product, or project and give each person or agent only the context its task requires. It keeps current facts readable, records meaningful changes, exposes uncertainty instead of filling gaps, and separates active context from history.
+Contextus is a file-first Agent Skill for maintaining the current truth about a company, product, or project. It gives people and agents one readable source for product facts, marketing, brand, website, technical context, decisions, changes, and unresolved conflicts.
 
-Contextus is file-first. Markdown and YAML remain usable without a hosted service, database, or visual application.
+## Quick Start
 
-## Why Contextus
-
-Agents often invent missing details, reuse outdated claims, or treat plans as released capabilities. Product reality also changes: teams ship and retire features, alter pricing, rebrand, enter new markets, and pivot.
-
-Contextus provides a maintained context layer where:
-
-- explicit team updates can become current truth immediately;
-- agent discoveries remain candidates until a person confirms them;
-- current, planned, experimental, deprecated, disputed, and historical information stay distinguishable;
-- conflicts trigger investigation instead of silent overwrites;
-- history is available for traceability but excluded from ordinary task context;
-- public, internal, and confidential information can be filtered for each output.
-
-## Design Principles
-
-Contextus combines two ideas.
-
-**Git-like evolution for product truth.** Product context changes over time, so meaningful updates should remain attributable, comparable, and reversible. Contextus keeps a ready-to-use current state while recording semantic changes such as a launch, deprecation, rebrand, correction, or pivot. History explains how the context evolved without forcing every agent to reconstruct the present from old events.
-
-**Structured contribution interfaces.** Team statements, agent research, project documents, code observations, and public sources are different input channels into the same context system. Contextus normalizes their claims, sources, dates, status, and visibility so they can be compared instead of blended into prose. When two inputs disagree, it exposes a branch-like semantic diff and asks for resolution rather than silently selecting or merging a version.
-
-The analogy stops at the useful mechanics. Contributors are not reduced to APIs, and ordinary users do not need to manage branches or rebases. Human authority, source type, and uncertainty remain explicit parts of the context.
-
-## Standard Entry
-
-An adopted project has one canonical entry at its repository root:
-
-```text
-contextus.md
-```
-
-Its YAML frontmatter identifies the subject, scope, visibility, format version, and maintained module paths. Its Markdown body gives people and agents a concise current overview. Detailed product, audience, marketing, brand, website, technical, decision, and change context may live in separate documents, but `contextus.md` is the only standard discovery entry.
-
-Legacy `project-context.md` files and tool-specific paths may still be read as fallback material. They are not new-project templates and must not become parallel context systems.
-
-## Install
+Install the skill:
 
 ```bash
 npx skills add kostja94/contextus --skill contextus
 ```
 
-## Use
-
-Create context from a conversation:
+Ask the agent to create the first context:
 
 ```text
 Use contextus to create a product context for Acme Studio from the facts I provide.
 ```
 
-Import existing material without changing it:
+The first meaningful result is a root `contextus.md`: a human-readable overview with machine-readable YAML frontmatter and links to any detailed context modules.
+
+Existing material can be imported without changing its source files:
 
 ```text
 Use contextus to analyze these project documents, identify current facts,
@@ -63,14 +30,79 @@ conflicts, history, and gaps, then propose a Contextus project.
 Do not modify the source documents.
 ```
 
-Maintain or export context:
+## What Contextus Maintains
+
+A Context Project may describe an organization, one product, or a bounded delivery project. It can maintain complete project-specific context across:
+
+- identity, positioning, users, scenarios, capabilities, and limits;
+- pricing, commercial rules, markets, locales, and availability;
+- marketing research, keywords, competitors, content, and channel decisions;
+- brand terminology, voice, visual identity, and prohibited claims;
+- website structure, pages, routes, interfaces, and user journeys;
+- repositories, architecture, deployment, data ownership, and technical constraints;
+- confirmed decisions, meaningful changes, open questions, and useful history.
+
+Contextus does not copy live operational data already owned by code, configuration, or another maintained system. It records the durable rule, necessary interpretation, and source location.
+
+## One Standard Entry
+
+Every adopted project has one canonical entry at its repository root:
 
 ```text
-Use contextus to record that the CLI moved from private beta to public beta.
-Then generate the minimum context needed by an agent writing its launch page.
+contextus.md
 ```
 
-## Repository Model
+Its frontmatter identifies the subject, scope, visibility, format version, and maintained module paths. Its body gives people and agents a concise current overview. Detailed modules own their topics; the entry does not duplicate their full content.
+
+Legacy `project-context.md` files and tool-specific paths may still be read as fallback material. They are not new-project templates and do not become parallel context systems.
+
+## Core Workflow
+
+The `contextus` skill supports seven operations through one entry point:
+
+| Operation | Result |
+| --- | --- |
+| Initialize | Create context from explicit team or user knowledge |
+| Import | Classify existing material without overwriting its source |
+| Update | Change current truth and record the semantic transition |
+| Resolve | Compare conflicting claims and request the missing judgment |
+| Maintain | Find stale, missing, duplicated, or broken context |
+| Export | Generate the minimum context required for one task and audience |
+| Snapshot | Preserve an important task context when reproduction matters |
+
+Explicit team statements can update current context directly. Agent research, code observations, project documents, and public sources remain candidate facts until a person confirms them. Unknown information stays unknown instead of becoming plausible copy.
+
+Contextus distinguishes lifecycle states such as `current`, `planned`, `experimental`, `deprecated`, `historical`, and `disputed`. It also filters `public`, `internal`, and `confidential` information for each output.
+
+## Git-Like Context Evolution
+
+Product truth changes as teams launch and retire capabilities, alter pricing, rebrand, expand markets, and pivot. Contextus keeps a ready-to-use current state while recording attributable, comparable, and reversible semantic changes.
+
+Team statements, agent research, documents, code observations, and public sources act as structured contribution channels. Contextus normalizes their claims, sources, dates, status, and visibility. When inputs disagree, it exposes a branch-like semantic difference and asks for resolution instead of silently selecting or blending a version.
+
+The analogy stops at the useful mechanics. Contributors are not reduced to APIs, and ordinary users do not manage branches or rebases.
+
+## Use With Other Agent Skills
+
+- [Marketing Skills](https://github.com/kostja94/marketing-skills) consumes project truth for SEO, content, channels, and strategy work.
+- [Pagina](https://github.com/kostja94/pagina) consumes project truth while building pages and returns confirmed facts or candidates.
+- [Bricks](https://github.com/kostja94/bricks) consumes relevant product, interface, brand, and technical context while building components.
+
+These projects remain usable without Contextus when the user supplies sufficient project material. They do not create or maintain another durable context system. The exact downstream behavior is maintained in the [integration contract](skills/contextus/references/integrations.md).
+
+## Boundaries
+
+Contextus manages durable project context. It does not:
+
+- make product or business strategy on the team's behalf;
+- treat an agent inference as a confirmed fact;
+- modify websites, repositories, campaigns, or other downstream assets without a separate explicit task;
+- store secrets, credentials, evidence archives, or undigested meeting transcripts;
+- act as personal memory, an enterprise approval platform, or a general document warehouse.
+
+A hosted service, full CLI, database, and visual interface are intentionally deferred while the file model and Agent Skill workflow are proven.
+
+## Repository
 
 ```text
 skills/contextus/
@@ -79,6 +111,7 @@ skills/contextus/
   references/
     information-model.md
     workflows.md
+    integrations.md
 templates/
   organization.md
   product.md
@@ -88,25 +121,11 @@ examples/
 scripts/validate.mjs
 ```
 
-The main skill handles initialization, non-destructive import, updates, conflict resolution, maintenance, export, and snapshots. Templates vary by subject scope but share one information model.
+The [information model](skills/contextus/references/information-model.md) owns context boundaries. [Workflows](skills/contextus/references/workflows.md) own lifecycle behavior. Templates are adaptable starting points rather than mandatory document sets.
 
-## Ecosystem
+## Development
 
-- [Marketing Skills](https://github.com/kostja94/marketing-skills) consumes project truth for SEO, content, channels, and strategy work.
-- [Pagina](https://github.com/kostja94/pagina) consumes project truth when building pages and returns newly confirmed facts as Contextus update candidates.
-- [Bricks](https://github.com/kostja94/bricks) consumes relevant product, interface, brand, and technical context when building components.
-
-These projects remain usable without Contextus when the user supplies sufficient project material. They do not create or maintain an alternative durable context system. See the downstream contract in `skills/contextus/references/integrations.md`.
-
-## Design Boundaries
-
-- Contextus manages context; it does not make product strategy on the team's behalf.
-- It updates its own context files. Changes to websites, repositories, campaigns, or other assets require a separate explicit task.
-- It stores source links or file references, not evidence archives.
-- It is not a personal memory system, enterprise approval platform, or general document warehouse.
-- A visual interface, hosted service, and full CLI are intentionally deferred until the file model and agent workflow are proven.
-
-## Validate
+Run the repository checks after changing the skill, templates, schema, references, or examples:
 
 ```bash
 npm test
