@@ -10,7 +10,7 @@ version: 0.1.0
 
 ## Discovery
 
-Downstream skills look for `contextus.md` at the project root. When present, they read its frontmatter and load only the modules relevant to the current task.
+Use the established stable project slug for the root filename, for example `acme.md`. Follow the project README pointer when present and verify the subject, `type: context` and `contextus_version`. If the folder name differs from the slug, inspect root Markdown manifests for the intended subject. Resolve ambiguous identities before writing. During adoption, inspect a matching existing project document and add the manifest in place after checking for competing owners. When present, they read its frontmatter and load only the modules relevant to the current task.
 
 When it is absent, a downstream skill may use user-provided facts, repository documentation, the current conversation, or legacy context files. It remains responsible for completing its own task when sufficient information is available.
 

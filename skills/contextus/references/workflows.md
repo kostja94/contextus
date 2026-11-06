@@ -90,3 +90,18 @@ Save an export only when the user requests it, the output is a formal delivery, 
 
 Contextus may identify downstream repositories, pages, content, or campaigns that could now be stale. Report those impacts. Do not modify an external asset without a separate explicit task.
 
+
+## Recommended first build
+
+Use this dependency order when assembling an initial project from scattered materials. Resume at the earliest missing evidence. Keep one useful module per maintained subject and record skipped or combined topics when that affects downstream work.
+
+1. Identify the subject, owner, market, scope, audience and visibility. Inventory existing files, preserve user edits, adopt the project-named root entry and register existing topic owners.
+2. Establish the website or product surface baseline. Reuse a maintained site inventory; delegate discovery and indexability checks to the appropriate domain workflow.
+3. Establish capabilities and user-facing features from product interfaces, docs, demos and commercial terms. Capture inputs, outputs, access, limits and evidence.
+4. Derive supported use cases from actor, trigger, task, workflow and result. Add solutions when delivery, integrations, implementation, proof or commercial constraints differ materially.
+5. When competitive research is in scope, give competitor-research the confirmed product boundaries and relevant candidates. Register its evidence and findings in the existing competitor module.
+6. When search research is in scope, give keyword-research the site inventory, product facts, scenarios and competitor leads. Register clusters and destinations in the keyword module.
+7. Derive a concrete next task when requested by the delivery process. Identify scope, evidence, acceptance and open dependencies.
+8. Reconcile entry links, owners, unresolved claims and permitted visibility. For a client handoff, use the project README for highlights and reading order. Update affected summaries when a topic owner changes.
+
+At import, distinguish a dated official disclosure from team confirmation, third-party reporting, inference and history. When sources disagree, record the proposition, versions, source dates, safe conclusion and decision needed. When a correction changes a capability (for example, historical import versus continuous sync), identify affected comparison claims, migration assets and keyword mappings. Return those decisions to their domain owners for review.

@@ -22,6 +22,8 @@ documents: {}
 
 # Atlas CLI
 
+Project entry: `atlas-cli.md`. A task that assesses competitors reads this overview plus the relevant registered module; proposed market findings return to the owner for confirmation.
+
 ## Identity And Positioning
 
 Atlas CLI is a command-line interface for running the fictional Atlas deployment workflow from local development environments and CI.

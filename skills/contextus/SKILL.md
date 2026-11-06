@@ -11,7 +11,7 @@ Maintain a reliable current context for an organization, product, or project, th
 
 ## Establish The Context Project
 
-Look for `contextus.md` at the project root first. It is the only standard discovery entry. Its frontmatter maps the maintained modules; read only those relevant to the task. Legacy `project-context.md` files and tool-specific locations are fallback material, not alternative standards.
+Resolve the project entry using [the discovery contract](references/integrations.md#discovery). For an initial build, follow the [recommended run](references/workflows.md#recommended-first-build). Use the stable project slug in the root filename `{project}.md`. Its frontmatter maps the maintained modules; read only those relevant to the task. Legacy `project-context.md` files and tool-specific locations are fallback material, not alternative standards.
 
 Determine the subject, scope, working perspective, included and excluded concerns, visibility, and relationships before choosing a template. A Context Project may describe a company, one product, or a bounded initiative. Do not force these into one hierarchy.
 

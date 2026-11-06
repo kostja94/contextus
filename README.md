@@ -20,7 +20,7 @@ Ask the agent to create the first context:
 Use contextus to create a product context for Acme Studio from the facts I provide.
 ```
 
-The first meaningful result is a root `contextus.md`: a human-readable overview with machine-readable YAML frontmatter and links to any detailed context modules.
+Replace `{project}` with the stable project slug (for example, `acme.md`). The first meaningful result is a root `{project}.md`: a human-readable overview with machine-readable YAML frontmatter and links to any detailed context modules.
 
 Existing material can be imported without changing its source files:
 
@@ -49,7 +49,7 @@ Contextus does not copy live operational data already owned by code, configurati
 Every adopted project has one canonical entry at its repository root:
 
 ```text
-contextus.md
+{project}.md
 ```
 
 Its frontmatter identifies the subject, scope, visibility, format version, and maintained module paths. Its body gives people and agents a concise current overview. Detailed modules own their topics; the entry does not duplicate their full content.

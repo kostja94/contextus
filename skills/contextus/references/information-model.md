@@ -24,7 +24,7 @@ Do not require a company context before creating a product context. Relationship
 
 ## Canonical Entry
 
-Every adopted project exposes one root `contextus.md`. The file combines a machine-readable frontmatter manifest with a concise human-readable overview.
+Every adopted project exposes one root `{project}.md`. The file combines a machine-readable frontmatter manifest with a concise human-readable overview.
 
 The manifest declares `contextus_version`, subject, scope, default visibility, and optional module paths. Module documents own their detailed subjects; the entry keeps at most a useful summary and direct link for each module.
 
@@ -97,3 +97,7 @@ Use section-level source metadata for groups of related facts. Require more prec
 Keep information when its absence or misinterpretation would likely cause a person or agent to make a wrong decision, produce false work, or ask the team the same question again.
 
 Exclude secrets, temporary instructions, generic research, execution logs, speculative conclusions, raw transcripts, and large copies of data already maintained elsewhere.
+
+## Choosing product modules
+
+Capabilities describe reusable inputs, outputs and constraints. Features describe how a user accesses a capability, including workflow, availability and plan limits. Keep them together when the mapping is simple. Use cases describe an actor, trigger, task, supported workflow and result. Persona and industry views can index the same maintained cases. Solutions warrant separate treatment when the combination of capabilities, services, integration, implementation, evidence or purchasing decision changes. Add pricing, proof, ecosystem or other modules only where they have distinct maintained facts. Adopt existing filenames and paths in the manifest. Keep customer-facing readmes focused on handoff and navigation.
