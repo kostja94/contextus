@@ -96,7 +96,7 @@ Contextus may identify downstream repositories, pages, content, or campaigns tha
 Use this dependency order when assembling an initial project from scattered materials. Resume at the earliest missing evidence. Keep one useful module per maintained subject and record skipped or combined topics when that affects downstream work.
 
 1. Identify the subject, owner, market, scope, audience and visibility. Inventory existing files, preserve user edits, adopt the project-named root entry and register existing topic owners.
-2. Establish the website or product surface baseline. Reuse a maintained site inventory; delegate discovery and indexability checks to the appropriate domain workflow.
+2. Establish the website or product surface baseline. Reuse a maintained site inventory; delegate discovery and indexability checks to [site-structure-inventory](https://github.com/kostja94/vibe-coding/tree/main/skills/site-structure-inventory).
 3. Establish capabilities and user-facing features from product interfaces, docs, demos and commercial terms. Capture inputs, outputs, access, limits and evidence.
 4. Derive supported use cases from actor, trigger, task, workflow and result. Add solutions when delivery, integrations, implementation, proof or commercial constraints differ materially.
 5. When competitive research is in scope, give competitor-research the confirmed product boundaries and relevant candidates. Register its evidence and findings in the existing competitor module.
